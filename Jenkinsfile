@@ -10,14 +10,12 @@ pipeline{
             steps{
                 script{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
-                         echo "success sam"
-                    //    sh '''
-                    //   chmod +x gradlew
-                    //   ./gradlew sonarqube
-                    //   '''
+                       sh '''
+                      chmod +x gradlew
+                      ./gradlew sonarqube
+                      '''
                 }
-            }
-            
+            }          
         }
     }
     post{
@@ -26,4 +24,5 @@ pipeline{
         }
         
     }
+}
 }
