@@ -14,15 +14,9 @@ pipeline{
                       chmod +x gradlew
                       ./gradlew sonarqube
                       '''
-                }
-            }          
-        }
-    }
-    post{
-        always{
-            echo "success sam"
-        }
-        
-    }
-}
+                    }  
+               }          
+           }
+       }
+   }
 }
